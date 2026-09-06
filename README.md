@@ -6,8 +6,8 @@ WAIT Network Official Website 是為 Minecraft 槍戰伺服器 **WAIT Network** 
 
 本專案不僅作為伺服器的 Landing Page，同時整合遊戲模式、戰場地圖展示與 Wiki / Documentation 系統。整體 UI 以 **Military / Tactical HUD** 為設計方向，透過動態效果、資訊層級與響應式排版，建立符合 FPS 遊戲氛圍的網站體驗。
 
-**Live Website:** [waitmc.vercel.app](https://waitmc.vercel.app)  
-**Wiki:** [waitmc.vercel.app/wiki](https://waitmc.vercel.app/wiki)
+**Live Website:** [waitmc.vercel.app](https://waitmc.yudong.me)  
+**Wiki:** [waitmc.vercel.app/wiki](https://waitmc.yudong.me/wiki)
 
 <p align="center">
   <img src="https://duk.tw/FxXfj9.png" width="68%" />
