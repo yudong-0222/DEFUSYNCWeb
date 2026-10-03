@@ -2,12 +2,13 @@
   "bg_terms": [
     "MODES",
     "FEATURES",
-    "WAIT",
-    "00:45",
-    "BATTLE",
+    "DEFUSYNC",
+    "TDM",
     "SND",
     "DUEL",
+    "BATTLE",
     "TACTICS",
-    "COMBAT"
+    "COMBAT",
+    "00:45"
   ]
 }

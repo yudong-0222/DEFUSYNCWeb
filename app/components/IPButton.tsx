@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function IPButton() {
   // const [copied, setCopied] = useState(false);
-  const ip = "敬請期待！";
+  const ip = "內部測試中，敬請期待！";
 
   // const copyIP = async () => {
   //   try {
@@ -51,7 +51,7 @@ export default function IPButton() {
       <div className="flex items-center bg-black/60 border border-white/10 rounded-md p-1 pl-4 backdrop-blur-sm shadow-2xl">
         <div className="flex items-center gap-3 pr-4">
           <span className="text-gray-500 font-mono text-sm border-r border-white/10 pr-3">
-            IP
+            目前狀態
           </span>
           <span className="text-[#00FF96] font-mono font-bold tracking-wider">
             {ip}

@@ -1,13 +1,14 @@
-# WAIT Network Official Website
+# DEFUSYNC Official Website
 
-> Official frontend website for **WAIT Network**, a competitive Minecraft FPS server focused on tactical gunplay, team strategy, and immersive combat experiences.
+DEFUSYNC 是一個專為高品質槍戰與玩家競技而設計的 Minecraft 伺服器。    
+此 Repo 為官方網頁，旨在提供優良的 SPA 使用體驗與視覺 UI 設計。
 
-WAIT Network Official Website 是為 Minecraft 槍戰伺服器 **WAIT Network** 所設計與開發的官方網站。
+DEFUSYNC Official Website 是為 Minecraft 槍戰伺服器 **DEFUSYNC** 所設計與開發的官方網站。
 
 本專案不僅作為伺服器的 Landing Page，同時整合遊戲模式、戰場地圖展示與 Wiki / Documentation 系統。整體 UI 以 **Military / Tactical HUD** 為設計方向，透過動態效果、資訊層級與響應式排版，建立符合 FPS 遊戲氛圍的網站體驗。
 
-**Live Website:** [waitmc.vercel.app](https://waitmc.yudong.me)  
-**Wiki:** [waitmc.vercel.app/wiki](https://waitmc.yudong.me/wiki)
+**Live Website:** [DEFUSYNC](https://defusync.yudong.me)  
+**Wiki:** [Wiki Page](https://defusync.yudong.me/wiki)
 
 <p align="center">
   <img src="https://duk.tw/FxXfj9.png" width="68%" />
@@ -70,7 +71,7 @@ WAIT Network Official Website 是為 Minecraft 槍戰伺服器 **WAIT Network** 
 
 ## Wiki & Documentation System
 
-WAIT Network Wiki 是本專案內建的內容管理與文件系統。
+DEFUSYNC  Wiki 是本專案內建的內容管理與文件系統。
 
 文章以 **Markdown / MDX** 撰寫，並由 Next.js 動態產生頁面：
 
@@ -121,7 +122,7 @@ Wiki Rendering Pipeline 整合了：
 ## Project Structure
 
 ```text
-WAITWeb/
+DEFUSYNCWeb/
 ├── app/
 │   ├── components/          # Reusable UI components
 │   ├── function/            # Frontend utilities / interactions
@@ -147,8 +148,8 @@ WAITWeb/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yudong-0222/WAITWeb.git
-cd WAITWeb
+git clone https://github.com/yudong-0222/DEFUSYNCWeb.git
+cd DEFUSYNCWeb
 ```
 
 Install dependencies:

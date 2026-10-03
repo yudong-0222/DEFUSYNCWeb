@@ -15,29 +15,31 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
-      ? "https://waitmc.yudong.me"
+      ? "https://defusync.yudong.me"
       : "https://localhost:3000",
   ),
   verification: {
     google: "mxF9LMrgIKvrUOCO11NjcI6Tk-qQ5dB1Hqrd7dGRao8",
   },
-  applicationName: "WAIT Network",
+  applicationName: "DEFUSYNC",
   icons: {
     icon: "/favicon.ico",
     apple: "/aicon.png",
   },
   title: {
-    default: "WAIT Network 槍戰伺服器 | 台灣最強 Minecraft SND 競技",
-    template: "%s | WAIT Network 台灣槍戰伺服器",
+    default: "DEFUSYNC | Minecraft 槍戰伺服器",
+    template: "%s | DEFUSYNC 台灣槍戰伺服器",
   },
   description:
-    "台灣 Minecraft 槍戰伺服器。在 Minecraft 體驗如 COD 般的槍戰。包含經典爆破、單挑對決與寫實等多種模式。",
+    "新世代台灣 Minecraft 槍戰伺服器，就在 DEFUSYNC。",
   keywords: [
+    "槍戰伺服器",
+    "台灣槍戰伺服器",
+    "minecraft 槍戰伺服器",
     "minecraft",
-    "wait",
-    "wait network",
-    "waitmc",
-    "waitmc.top",
+    "DEFUSYNC",
+    "Defusync",
+    "defusync",
     "pvp server",
     "pvp 伺服器",
     "競技伺服器",
@@ -45,13 +47,11 @@ export const metadata: Metadata = {
     "search and destroy",
     "snd wiki",
     "遊戲 wiki",
-    "槍戰伺服器",
-    "台灣槍戰伺服器",
     "槍械伺服器",
-    "minecraft 伺服器",
-    "minecraft 槍戰伺服器",
+    "minecrat 伺服器",
     "cod minecraft",
     "經典爆破",
+    "拆炸彈",
     "爆破模式",
     "決勝時刻",
     "決勝時刻M",
@@ -59,10 +59,10 @@ export const metadata: Metadata = {
     "決勝時刻 minecraft",
   ],
   openGraph: {
-    title: "WAIT Network | 台灣槍戰伺服器",
-    description: "加入 WAIT，體驗新世代台灣 Minecraft 槍戰伺服器。",
-    url: "https://waitmc.yudong.me",
-    siteName: "WAIT Network",
+    title: "DEFUSYNC | 台灣槍戰伺服器",
+    description: "新世代台灣 Minecraft 槍戰伺服器，就在 DEFUSYNC。",
+    url: "https://defusync.yudong.me",
+    siteName: "DEFUSYNC",
     images: [
       {
         url: "/og-image.jpg",
@@ -84,9 +84,9 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "WAIT Network",
-    alternateName: ["WAITMC", "WAIT 槍戰伺服器", "WAIT MC", "WAITMC 伺服器"],
-    url: "https://waitmc.yudong.me",
+    name: "DEFUSYNC",
+    alternateName: ["DEFUSYNC", "DEFUSYNC 槍戰伺服器", "DEFUSE", "DEFUSYNC 伺服器"],
+    url: "https://defusync.yudong.me",
   };
 
   return (

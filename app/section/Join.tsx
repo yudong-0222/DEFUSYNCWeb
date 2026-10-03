@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import Radar from "../components/Radar";
 
 export default function Join() {
-  const ip = "waitmc.top";
+  const ip = "defusync.yudong.me";
 
   const copyIP = async () => {
     try {

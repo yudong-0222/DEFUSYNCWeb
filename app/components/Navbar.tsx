@@ -49,7 +49,7 @@ export default function Navbar() {
             />
           </motion.div>
           <span className="font-bold tracking-wide text-white text-xl">
-            WAIT NETWORK
+            DEFUSYNC
           </span>
         </Link>
 

@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image */}
       <Image
         src="/hero.jpg"
-        alt="WaitNetwork Hero"
+        alt="Hero"
         fill
         sizes="100vw"
         className="object-cover "
@@ -21,11 +21,12 @@ export default function Hero() {
         {" "}
         <div className="max-w-2xl">
           <h1 className="text-6xl font-bold text-white mb-4">
-            WAIT
-            <span className="text-icon-blue"> Network</span>
+            DEFUSYNC
           </h1>
           <p className="text-gray-300 text-xl mb-8">
-            經典爆破 / 單挑對決 / 寫實模式 / FPS in Minecraft
+            <span className="">Minecraft 槍戰伺服器</span>
+            <br />
+            經典爆破・單挑對決・團隊死鬥・寫實模式
           </p>
           <IPButton />
         </div>

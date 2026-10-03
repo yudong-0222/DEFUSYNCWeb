@@ -3,7 +3,7 @@ import { getAllContent } from "@/libs/markdown";
 import { Post } from "@/types/post";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://waitmc.yudong.me";
+  const baseUrl = "https://defusync.yudong.me";
 
   const allPosts = getAllContent() as Post[];
 

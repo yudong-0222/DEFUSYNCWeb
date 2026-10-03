@@ -3,7 +3,7 @@ title: "H31l0 W0r1d"
 date: "2026-01-14"
 type: "news"
 category: "最新公告"
-description: "WAIT Network First Post: Hello world!"
+description: "DEFUSYNC First Post: Hello world!"
 image: "/maps/island2.webp"
 isTop: false
 ---
@@ -22,10 +22,10 @@ _We will post updates in the future!_
 #### 大家好
 
 這是我們的**第一篇新聞測試**。
-以後也可能將在此處上傳關於 WAIT 的更新資訊！
+以後也可能將在此處上傳關於 DEFUSYNC 的更新資訊！
 
 - 裝備 `AK_47` 已上線。
-- 檢查 [系統狀態](https://waitmc.top)。
+- 檢查 [系統狀態](https://defusync.yudong.me)。
 
 ![](https://duk.tw/lEtmDk.png)
 

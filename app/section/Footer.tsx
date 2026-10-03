@@ -10,7 +10,7 @@ export default function Footer() {
           {/* LOGO */}
           <div className="space-y-4">
             <h2 className="text-white text-2xl font-black italic tracking-tighter">
-              WAIT<span className="text-[#00FF96]">MC</span>
+              DEFU<span className="text-[#00FF96]">SYNC</span>
             </h2>
             <p className="text-gray-500 text-xs font-mono leading-relaxed max-w-xs">
               新世代的 Minecraft
@@ -111,7 +111,7 @@ export default function Footer() {
         {/* COPRGIHT */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-center items-center gap-4">
           <p className="text-gray-600 text-[9px] font-mono tracking-widest uppercase">
-            © 2021 - {currentYear} WAIT NETWORK // ALL RIGHTS RESERVED
+            © {currentYear} DEFUSYNC //
           </p>
         </div>
       </div>

@@ -29,7 +29,7 @@ export async function generateMetadata({
       post.frontmatter.description ||
       `閱讀關於 ${post.frontmatter.title} 的最新情報。`,
     openGraph: {
-      title: `${post.frontmatter.title} | WAIT Network 槍戰伺服器`,
+      title: `${post.frontmatter.title} | DEFUSYNC`,
       description: post.frontmatter.description,
       type: "article",
       images: [post.frontmatter.image || "/og-image.jpg"],
@@ -190,7 +190,7 @@ export default async function PostPage({
           {/* Footer  */}
           <div className="mt-20 pt-8 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-gray-700">
             <span>END_OF_TRANSMISSION</span>
-            <span>WAIT_INTEL</span>
+            <span>DEFUSYNC</span>
           </div>
         </div>
 
