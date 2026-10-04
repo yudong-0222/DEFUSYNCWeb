@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "./section/Hero";
+import About from "./section/About";
 import Navbar from "./components/Navbar";
 import Modes from "./section/Modes";
 import Map from "./section/Map";
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <About />
       <Modes />
       <Map />
       <Join />
