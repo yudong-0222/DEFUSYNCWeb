@@ -8,7 +8,7 @@ image: "/maps/island2.webp"
 isTop: false
 ---
 
-# 你好世界！
+## 你好世界！
 
 _MATE, this is the first post at here!_  
 _We will post updates in the future!_

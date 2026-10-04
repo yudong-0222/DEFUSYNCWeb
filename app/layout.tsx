@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | DEFUSYNC 台灣槍戰伺服器",
   },
   description:
-    "新世代台灣 Minecraft 槍戰伺服器，就在 DEFUSYNC。",
+    "DEFUSYNC 是一個台灣 Minecraft 槍戰競技伺服器，主打 SND 經典爆破、TDM 團隊死鬥、DUEL 1v1 與 REALISTIC 寫實模式，提供自訂 Loadouts、類 COD 槍戰機制與 PVP 對戰體驗。",
   keywords: [
     "槍戰伺服器",
     "台灣槍戰伺服器",
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
     "決勝時刻 minecraft",
   ],
   openGraph: {
-    title: "DEFUSYNC | 台灣槍戰伺服器",
-    description: "新世代台灣 Minecraft 槍戰伺服器，就在 DEFUSYNC。",
+    title: "DEFUSYNC | Minecraft 槍戰伺服器",
+    description: "DEFUSYNC 是一個台灣 Minecraft 槍戰競技伺服器，主打 SND 經典爆破、TDM 團隊死鬥、DUEL 1v1 與 REALISTIC 寫實模式，提供自訂 Loadouts、類 COD 槍戰機制與 PVP 對戰體驗。",
     url: "https://defusync.yudong.me",
     siteName: "DEFUSYNC",
     images: [

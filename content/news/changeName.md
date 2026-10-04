@@ -3,12 +3,12 @@ title: "【通知】名稱變更：WAIT Network → DEFUSYNC"
 date: "2026-10-01"
 type: "news"
 category: "最新公告"
-description: "WAIT Network 正式更名為 DEFUSYNC"
+description: "WAIT Network 正式更名為 DEFUSYNC。我們將持續專注於 Minecraft FPS 與槍戰競技玩法，並以全新品牌展開下一階段開發。"
 image: "/maps/nameblog.webp"
 isTop: false
 ---
 
-# WAIT Network, Thank you.
+## WAIT Network, Thank you.
 
 自從 2017 年以來，**WAIT Network** 這個名字就一直陪伴著我們。
 

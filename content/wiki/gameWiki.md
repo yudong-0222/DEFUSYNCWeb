@@ -1,14 +1,12 @@
 ---
-title: "SND 基礎遊玩指南"
+title: "DEFUSYNC 遊玩指南"
 date: "2026-01-14"
 type: "wiki"
 category: "遊戲指南"
-description: "🌟 | 必看！基礎的遊戲指南。在開始正式遊玩 SND 前，先來看看吧！"
+description: "DEFUSYNC 官方遊玩指南，介紹伺服器加入方式、支援版本，以及 SND 經典爆破、TDM 團隊死鬥、DUEL 1v1、REALISTIC 寫實模式、自訂對戰配置與常見問題。"
 image: "/maps/crash.webp"
 isTop: true
 ---
-
-# SND 基礎遊玩指南
 
 > 🌴 | 本指南仍持續撰寫更新中，若有不完整之處，敬請見諒！
 
@@ -172,8 +170,8 @@ isTop: true
 
 ## 常見問題 FAQ
 
-> Q: WAITMC 是免費遊玩的嗎？有 Pay-to-Win 嗎？  
-> A: **WAITMC 可以免費遊玩。** 目前付費內容及商城系統仍在規劃階段，預計將以**槍枝造型（Gun Skins）**、**MVP 音樂包**等內容為主；**戰鬥通行證（Battle Pass）**則屬於較後期的規劃，目前尚未實裝。
+> Q: DEFUSYNC 是免費遊玩的嗎？有 Pay-to-Win 嗎？  
+> A: **DEFUSYNC 可以免費遊玩。** 目前付費內容及商城系統仍在規劃階段，預計將以**槍枝造型（Gun Skins）**、**MVP 音樂包**等內容為主；**戰鬥通行證（Battle Pass）**則屬於較後期的規劃，目前尚未實裝。
 >
 > 相關付費內容與系統仍可能有所調整，實際內容將以日後正式公告為準。
 
@@ -198,11 +196,11 @@ isTop: true
 > Q: 發現 BUG 或遊戲異常該去哪裡回報？  
 > A: 請前往 Discord 的 [問題回報論壇](https://discord.com/channels/860827890307432468/1107307332632846476) 進行回報。回報時請盡可能描述問題發生的情況，以協助我們確認及處理問題。
 
-> Q: 可以實況、錄影或上傳 WAITMC 的遊玩內容嗎？  
-> A: **完全可以！** 我們不限制玩家實況、錄影或上傳在 WAITMC 中的遊玩內容，也歡迎大家分享自己的遊戲過程與精彩時刻。
+> Q: 可以實況、錄影或上傳 DEFUSYNC 的遊玩內容嗎？  
+> A: **完全可以！** 我們不會限制玩家實況、錄影或上傳在 DEFUSYNC 中的遊玩內容，也很歡迎大家分享自己的遊戲過程與精彩時刻。
 
 > Q: 我可以使用 Lunar Client、Feather Client 或其他第三方客戶端嗎？  
-> A: **可以**。WAIT Network 不限制玩家使用 Lunar Client、Feather Client、Fabric 等第三方客戶端，但玩家**有義務確保所使用的模組及功能符合伺服器規範。**  
+> A: **可以**。DEFUSYNC 不會限制玩家使用 Lunar Client、Feather Client、Fabric 等第三方客戶端，但玩家**有義務確保所使用的模組及功能符合伺服器規範。**  
 > 若你無法確定某個 Client、Mod 或功能是否允許使用，請在使用前至 [Discord](https://discord.com/invite/RNJQFYbjVp) 詢問管理團隊。
 
 :::spoiler 點我查看模組與功能清單
@@ -272,7 +270,7 @@ isTop: true
 
 若你無法確定某個 Client、Mod 或功能是否允許使用，請在使用前至 [Discord](https://discord.com/invite/RNJQFYbjVp) 詢問管理團隊。
 
-**「Client 有提供這項功能」不代表 WAIT Network 允許使用。**
+**「Client 有提供這項功能」不代表允許使用。**
 
 上述清單僅列出常見範例，無法涵蓋所有第三方模組與作弊行為。  
 即使某項功能未被明確列出，只要其效果足以提供**不公平的競技優勢**，管理團隊仍有理由將其視為違規功能。

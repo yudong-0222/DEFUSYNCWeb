@@ -3,12 +3,12 @@ title: "從此不再等待空房間！MatchMaker 配對系統正式上線"
 date: "2026-02-14"
 type: "devlog"
 category: "開發日誌"
-description: "我們改良了伺服器本身的配對機制"
+description: "DEFUSYNC MatchMaker 開發日誌：介紹 Minecraft 槍戰伺服器如何以動態 Arena Instance 改良多人配對流程，讓同一張地圖可同時建立多場對局。"
 image: "/postImg/MTAC.webp"
 isTop: false
 ---
 
-# MatchMaker，全新的配對機制
+## MatchMaker，全新的配對機制
 
 我們正式實裝了新的 **MatchMaker 配對系統**。
 

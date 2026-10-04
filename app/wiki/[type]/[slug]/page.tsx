@@ -28,6 +28,11 @@ export async function generateMetadata({
     description:
       post.frontmatter.description ||
       `閱讀關於 ${post.frontmatter.title} 的最新情報。`,
+  
+    alternates: {
+      canonical: `/wiki/${type}/${slug}`,
+    },
+  
     openGraph: {
       title: `${post.frontmatter.title} | DEFUSYNC`,
       description: post.frontmatter.description,
