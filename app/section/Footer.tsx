@@ -18,11 +18,6 @@ export default function Footer() {
               Minecraft network. Built for precision, strategy, and competitive
               gameplay.
             </p>
-            {/* SYSTYME STATUS dot */}
-            <div className="flex items-center gap-2 text-[10px] font-mono text-[#00FF96]/60">
-              <span className="w-1.5 h-1.5 bg-[#00FF96] rounded-full animate-pulse" />
-              ALL_SYSTEMS_WORKS
-            </div>
           </div>
 
           {/* Naviagtiron and links */}
