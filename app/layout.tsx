@@ -83,14 +83,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  //Inejection JSON-LD
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "DEFUSYNC",
-    alternateName: ["DEFUSYNC", "DEFUSYNC 槍戰伺服器", "DEFUSE", "DEFUSYNC 伺服器"],
-    url: "https://defusync.yudong.me",
-  };
 
   return (
     <html lang="zh-TW" suppressHydrationWarning data-scroll-behavior="smooth">
@@ -98,10 +90,6 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         {children}
       </body>
     </html>
