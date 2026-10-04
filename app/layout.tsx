@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       : "https://localhost:3000",
   ),
   verification: {
-    google: "mxF9LMrgIKvrUOCO11NjcI6Tk-qQ5dB1Hqrd7dGRao8",
+    google: "AzG41wLRqncRKtWQNfe4dMWgwcOv5Qdy96IiQeCCEcE",
   },
   applicationName: "DEFUSYNC",
   icons: {
