@@ -23,20 +23,24 @@ export async function generateMetadata({
 
   if (!post) return { title: "Post Not Found" };
 
+  const description =
+    post.frontmatter.description ||
+    `閱讀關於 ${post.frontmatter.title} 的最新情報。`;
+
   return {
     title: post.frontmatter.title,
-    description:
-      post.frontmatter.description ||
-      `閱讀關於 ${post.frontmatter.title} 的最新情報。`,
-  
+    description,
+
     alternates: {
       canonical: `/wiki/${type}/${slug}`,
     },
-  
+
     openGraph: {
       title: `${post.frontmatter.title} | DEFUSYNC`,
-      description: post.frontmatter.description,
+      description,
+      url: `/wiki/${type}/${slug}`,
       type: "article",
+      publishedTime: post.frontmatter.date,
       images: [post.frontmatter.image || "/og-image.jpg"],
     },
   };
@@ -51,6 +55,61 @@ export default async function PostPage({
   const post = await getPostBySlug(type, slug);
 
   if (!post) return notFound();
+
+  const siteUrl = "https://defusync.yudong.me";
+  const articleUrl = `${siteUrl}/wiki/${type}/${slug}`;
+
+  const articleType = type === "news" ? "NewsArticle" : "Article";
+
+  const description =
+    post.frontmatter.description ||
+    `閱讀關於 ${post.frontmatter.title} 的最新情報。`;
+
+  const imageUrl = post.frontmatter.image
+    ? post.frontmatter.image.startsWith("http")
+      ? post.frontmatter.image
+      : `${siteUrl}${post.frontmatter.image}`
+    : `${siteUrl}/og-image.jpg`;
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": articleType,
+    "@id": `${articleUrl}#article`,
+
+    headline: post.frontmatter.title,
+    description,
+
+    datePublished: post.frontmatter.date,
+
+    image: imageUrl,
+
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+
+    author: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "DEFUSYNC",
+      url: siteUrl,
+    },
+
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "DEFUSYNC",
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/logo.jpg`,
+      },
+    },
+
+    articleSection: post.frontmatter.category,
+
+    inLanguage: "zh-TW",
+  };
 
   const headings = parseHeadings(post.content);
   const style = typeStyles[type as keyof typeof typeStyles] || typeStyles.wiki;
@@ -116,117 +175,125 @@ export default async function PostPage({
   }
 
   return (
-    <article className="min-h-screen bg-dark-bg text-white pt-8 pb-20 px-6">
-      {" "}
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
-        <div className="flex-1 min-w-0 w-full">
-          <Link
-            href="/wiki"
-            className="text-[#00FF96] text-xs font-mono mb-8 inline-block hover:-translate-x-1 transition-transform"
-          >
-            {"< BACK_TO_DATABASE"}
-          </Link>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd),
+        }}
+      />
+      <article className="min-h-screen bg-dark-bg text-white pt-8 pb-20 px-6">
+        {" "}
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex-1 min-w-0 w-full">
+            <Link
+              href="/wiki"
+              className="text-[#00FF96] text-xs font-mono mb-8 inline-block hover:-translate-x-1 transition-transform"
+            >
+              {"< BACK_TO_DATABASE"}
+            </Link>
 
-          {/* TITLE */}
-          <header className="mb-12">
-            <div className="flex items-center gap-4 mb-4">
-              <span
-                className={`px-2 py-1 ${style.color} ${style.glow} text-[10px] font-bold`}
-              >
-                {post.frontmatter.category}
-              </span>
-              <span className="text-white-600 text-[12px] font-mono">
-                RECEIVED: {post.frontmatter.date}
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter mb-6 uppercase">
-              {post.frontmatter.title}
-            </h1>
-            {post.frontmatter.image && (
-              <div className="group relative aspect-video w-full mb-8 overflow-hidden rounded-sm">
-                <Image
-                  src={post.frontmatter.image}
-                  alt="cover"
-                  fill
-                  sizes="(min-width: 1200px) 848px, (min-width: 1024px) calc(100vw - 352px), calc(100vw - 48px)"
-                  className="
+            {/* TITLE */}
+            <header className="mb-12">
+              <div className="flex items-center gap-4 mb-4">
+                <span
+                  className={`px-2 py-1 ${style.color} ${style.glow} text-[10px] font-bold`}
+                >
+                  {post.frontmatter.category}
+                </span>
+                <span className="text-white-600 text-[12px] font-mono">
+                  RECEIVED: {post.frontmatter.date}
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-black italic tracking-tighter mb-6 uppercase">
+                {post.frontmatter.title}
+              </h1>
+              {post.frontmatter.image && (
+                <div className="group relative aspect-video w-full mb-8 overflow-hidden rounded-sm">
+                  <Image
+                    src={post.frontmatter.image}
+                    alt="cover"
+                    fill
+                    sizes="(min-width: 1200px) 848px, (min-width: 1024px) calc(100vw - 352px), calc(100vw - 48px)"
+                    className="
                     object-cover 
                     transition-transform 
                     duration-700 
                     group-hover:scale-110
                   "
-                />
-              </div>
-            )}
-          </header>
+                  />
+                </div>
+              )}
+            </header>
 
-          {/* Post content redernign*/}
-          {/* Proose: a cool thing to make md -> html rendering */}
-          <div className={proseStyles}>
-            <MDXRemote
-              source={post.content}
-              options={{
-                mdxOptions: {
-                  rehypePlugins: [
-                    rehypeHighlight,
-                    rehypeSlug,
-                    rehypeStrikethrough,
-                    rehypeSpoiler,
-                  ],
-                },
-              }}
-            />
-          </div>
-
-          {/* Relate read (read momre)*/}
-          <section className="mt-32 border-t border-white/10 pt-16">
-            <h3 className="text-[#00FF96] font-mono text-xs mb-8 tracking-[0.3em] uppercase flex items-center gap-4">
-              {"相關情報文件 // Related_Intelligence_Files"}
-              <div className="h-px flex-1 bg-white/5" />
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rp.map((p) => (
-                <PostCard key={p.slug} post={p} isAnimated={false} />
-              ))}
+            {/* Post content redernign*/}
+            {/* Proose: a cool thing to make md -> html rendering */}
+            <div className={proseStyles}>
+              <MDXRemote
+                source={post.content}
+                options={{
+                  mdxOptions: {
+                    rehypePlugins: [
+                      rehypeHighlight,
+                      rehypeSlug,
+                      rehypeStrikethrough,
+                      rehypeSpoiler,
+                    ],
+                  },
+                }}
+              />
             </div>
-          </section>
 
-          {/* Footer  */}
-          <div className="mt-20 pt-8 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-gray-700">
-            <span>END_OF_TRANSMISSION</span>
-            <span>DEFUSYNC</span>
+            {/* Relate read (read momre)*/}
+            <section className="mt-32 border-t border-white/10 pt-16">
+              <h3 className="text-[#00FF96] font-mono text-xs mb-8 tracking-[0.3em] uppercase flex items-center gap-4">
+                {"相關情報文件 // Related_Intelligence_Files"}
+                <div className="h-px flex-1 bg-white/5" />
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {rp.map((p) => (
+                  <PostCard key={p.slug} post={p} isAnimated={false} />
+                ))}
+              </div>
+            </section>
+
+            {/* Footer  */}
+            <div className="mt-20 pt-8 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-gray-700">
+              <span>END_OF_TRANSMISSION</span>
+              <span>DEFUSYNC</span>
+            </div>
           </div>
+
+          {/* TOC - PC */}
+          <aside className="hidden lg:block w-64 sticky top-20 shrink-0">
+            <div className="border-l border-white/5 pl-6">
+              <h3
+                className={`${style.text} font-mono text-[12px] mb-6 tracking-[0.2em] uppercase opacity-95`}
+              >
+                {"// Contents_Index"}
+              </h3>
+              <nav className="flex flex-col gap-4">
+                {headings.map((heading) => (
+                  <a
+                    key={heading.key}
+                    href={`#${heading.id}`}
+                    className={`text-[14px] uppercase tracking-wider transition-all duration-300 hover:text-[#00FF96] ${
+                      heading.level === 1
+                        ? "text-white font-black mb-1" //h1 bigger
+                        : heading.level === 3
+                          ? "pl-4 text-gray-500 border-l border-transparent hover:border-[#00FF96]/30"
+                          : "pl-2 text-gray-300 font-bold"
+                    }`}
+                  >
+                    {heading.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </aside>
         </div>
-
-        {/* TOC - PC */}
-        <aside className="hidden lg:block w-64 sticky top-20 shrink-0">
-          <div className="border-l border-white/5 pl-6">
-            <h3
-              className={`${style.text} font-mono text-[12px] mb-6 tracking-[0.2em] uppercase opacity-95`}
-            >
-              {"// Contents_Index"}
-            </h3>
-            <nav className="flex flex-col gap-4">
-              {headings.map((heading) => (
-                <a
-                  key={heading.key}
-                  href={`#${heading.id}`}
-                  className={`text-[14px] uppercase tracking-wider transition-all duration-300 hover:text-[#00FF96] ${
-                    heading.level === 1
-                      ? "text-white font-black mb-1" //h1 bigger
-                      : heading.level === 3
-                        ? "pl-4 text-gray-500 border-l border-transparent hover:border-[#00FF96]/30"
-                        : "pl-2 text-gray-300 font-bold"
-                  }`}
-                >
-                  {heading.text}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </aside>
-      </div>
-    </article>
+      </article>
+    </>
   );
 }
