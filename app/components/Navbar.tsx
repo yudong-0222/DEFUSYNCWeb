@@ -88,7 +88,7 @@ export default function Navbar() {
             boxShadow: "0 0 20px rgba(0, 255, 150, 0.4)",
           }}
           whileTap={{ scale: 0.95 }}
-          className="px-6 py-2 bg-[#00FF96] text-white font-bold text-sm rounded-sm uppercase"
+          className="px-6 py-2 bg-[#00FF96] text-black font-bold text-sm rounded-sm uppercase"
           onClick={handlePlayNow}
         >
           Play Now
